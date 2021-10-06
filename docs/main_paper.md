@@ -1,6 +1,9 @@
 ## Introduction
 * Global trash issues
-* How does urban waste affect this?
+    * In 2011 11 billion tons of solid waste was produced
+    * In 2014 around 42 million tonnes of electronic waste was created
+    * Worldwide plastics and polymer consumption has increased about 10% per year since the 1990s
+    * Ocean waste
 * How are streets cleaned now?
     * Volunteer
     * Government
