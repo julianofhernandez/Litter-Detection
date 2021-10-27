@@ -4,6 +4,8 @@ import argparse
 import time
 from matplotlib import pyplot as plt
 
+# Made from this tutorial: https://towardsdatascience.com/object-detection-using-yolov3-and-opencv-19ee0792a420
+
 
 class YoloPretrainedOnCoco:
 	def load_yolo(self):
