@@ -1,6 +1,7 @@
 .virtualenv/
 .vscode/
-models/
+src/models/
+src/images/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,1 +1,6 @@
+GDAL and Fiona from
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#fiona
+
 geopandas
+tensorflow==1.15
+rasterio
