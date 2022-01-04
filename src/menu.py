@@ -1,7 +1,8 @@
 import os
 import argparse
 
-from GeoDataFrameWrapper import GeoDataFrameWrapper
+from WasteMap import WasteMap
+from data_sources.Mapillary import Mapillary
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
@@ -12,33 +13,41 @@ if __name__ == "__main__":
 	detect.add_argument('-m', '--model', type=str, help='Which bject detection model to use')
 	args = parser.parse_args()
 
+	option = ''
+	
+	# uncomment to skip setup
+	map = WasteMap("save_files/random.geojson")
+	mapillary = Mapillary()
+	# print("Welcome to the cmd application")
+	# option = input('Enter a path to a geojson file: ')
+	# while (not os.path.isfile(option)):
+	# 	print('Not a file')
+	# 	option = input('Enter a path to a geojson file: ')
+	# map = WasteMap(option)
+
 	while(quit!=True):
-		print("Welcome to the gui application")
-
-		option = ''
-		
-		while not os.path.isfile(option):
-			option = input('Enter a path to a geojson file: ')
-			print('Not a file')
-		dataframe = GeoDataFrameWrapper(option)
-
-
-
 		print("""
 Options:
 1: Print map
-2: Interactive mode
-3: Quit""")
+2: Print dataframe (debug)
+3: Add images to geoJSON
+4: Quit
+5: Download images""")
 		try:
 			option = int(input('Enter your choice: '))
 		except:
 			print('Wrong input. Please enter a number ...')
 		if option == 1:
-			dataframe.print_map()
+			map.print_map()
 		elif option == 2:
-			dataframe.interactive_map()
+			print(map.dataframe)
 		elif option == 3:
+			map.add_images(input("Enter an image path to process:\n"))
+		elif option == 4:
+			map.write()
 			quit = True
+		elif option == 5:
+			mapillary.download_images_in_bbox(13,55.599,13.001,55.600)
 		else:
 			print('Invalid option. Please enter a number between 1 and 4.')
 
