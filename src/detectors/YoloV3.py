@@ -80,6 +80,7 @@ class YOLOv3:
 		cv2.imshow("Image", img)
 
 	def format_output(self, boxes, confs, class_ids, classes, img):
+		'''Convert detection output to the correct format for storing in the geoJSON file'''
 		properties = {}
 		colors = np.random.uniform(0, 255, size=(len(classes), 3))
 		indexes = cv2.dnn.NMSBoxes(boxes, confs, 0.5, 0.4)

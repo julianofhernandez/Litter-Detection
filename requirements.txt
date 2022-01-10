@@ -1,6 +1,11 @@
-GDAL and Fiona from
-https://www.lfd.uci.edu/~gohlke/pythonlibs/#fiona
-
 geopandas
 tensorflow==1.15
+# tensorflow-cpu==1.15
 rasterio
+Keras==2.1.6
+geojson==2.5.0
+geopandas==0.10.2
+matplotlib==3.5.1
+numpy==1.21.0
+opencv-python==4.5.5.62
+tqdm==4.61.1

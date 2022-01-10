@@ -22,6 +22,7 @@ class WasteMap:
 		self.mapillary = Mapillary()
 
 	def print_map(self):
+		'''print map from the loaded geoJSON file'''
 		ax = self.dataframe.plot(markersize=10, color="red", figsize=(9, 9))
 		cx.add_basemap(ax, crs=self.dataframe.crs.to_string(), source=cx.providers.CartoDB.Voyager)
 		# fig = matplotlib.pyplot.gcf()
@@ -55,6 +56,7 @@ class WasteMap:
 			self.add_image(images[i])
 
 	def get_coordinates(self, image_path):
+		#TODO: No longer in use needs to be removed
 		id = os.path.splitext(os.path.basename(image_path))[0]
 		responce = requests.get('https://graph.mapillary.com/2265641036902438?access_token=MLY|3461141010677895|c26e4e4b32b90d5cb1db934c54ebe2c8&fields=id,computed_geometry,thumb_1024_url')
 		responce_json = json.loads(responce.content.decode('utf-8'))
@@ -65,10 +67,12 @@ class WasteMap:
 		return coordinates
 
 	def read(self, file_path=None):
+		'''Opens geoJSOn save file'''
 		if file_path:
 			self.dataframe = geopandas.read_file(file_path)
 		else:
 			self.dataframe = geopandas.read_file(self.file_path)
 
 	def write(self):
+		'''Write geodataframe to geoJSON save file'''
 		self.dataframe.to_file(self.file_path, driver="GeoJSON")
