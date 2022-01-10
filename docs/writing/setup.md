@@ -15,6 +15,7 @@ Install Mask-RCNN following the instructions at https://github.com/matterport/Ma
 
 ## Notes
 src/menu.py is the entry point
+
     1. Create map of all processed images stored in the geojson file
     2. prints out geopandas dataframe (debug only)
     3. Will run computer vision on all images in src/images and add them to the geoJSON file
