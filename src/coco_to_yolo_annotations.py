@@ -87,9 +87,9 @@ for i in tqdm(range(len(training_data['annotations']))):
 train_file = open(os.path.join(output_folder, 'train.txt'), 'a+')
 val_file = open(os.path.join(output_folder, 'val.txt'), 'a+')
 counter = 0
-for image in os.listdir(os.path.join(output_folder, 'labels')):
+for image in os.listdir(os.path.join(output_folder, 'images')):
     counter += 1
-    image_path = os.path.abspath(image_path)
+    image_path = os.path.abspath(os.path.join(output_folder, 'images', image))
     if (counter == 4):
         counter = 0
         val_file.write(image_path + '\n')
