@@ -6,7 +6,7 @@ from shapely.geometry import Point
 import os
 import json
 from data_sources.Mapillary import Mapillary
-from detectors.YOLOv3 import YOLOv3
+from detectors.YoloV3 import YOLOv3
 # from detectors.MaskRCNN import MaskRCNN
 import contextily as cx
 import requests
