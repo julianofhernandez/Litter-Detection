@@ -15,11 +15,12 @@ Install Mask-RCNN following the instructions at https://github.com/matterport/Ma
 
 ## Notes
 src/menu.py is the entry point
-    1. Create map of all processed images stored in the geojson file
-    2. prints out geopandas dataframe (debug only)
-    3. Will run computer vision on all images in src/images and add them to the geoJSON file
-    4. Exits and saved geoJSON file
-    5. Downloads images from Mapillary in a set area to src/images
+
+1. Create map of all processed images stored in the geojson file
+2. prints out geopandas dataframe (debug only)
+3. Will run computer vision on all images in src/images and add them to the geoJSON file
+4. Exits and saved geoJSON file
+5. Downloads images from Mapillary in a set area to src/images
 
 ## Models
 /src/models should hold these three files for yolov3 to work, which can be downloaded from https://pjreddie.com/darknet/yolo/
