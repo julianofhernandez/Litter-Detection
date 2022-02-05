@@ -43,5 +43,5 @@ if __name__ == "__main__":
 		map.print_map()
 
 	if args.command == 'download':
-		mapillary = Mapillary()
-		mapillary.download_images_in_bbox(13,55.599,13.001,55.600)
+		data_source = Mapillary()
+		data_source.download_images_in_bbox(13,55.599,13.001,55.600)

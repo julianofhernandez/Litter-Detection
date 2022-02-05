@@ -13,3 +13,6 @@ map:
 
 detect:
 	python37 .\menu.py detect -i images/ -m models/yolov3_30000 -g save_files/random.geojson
+
+install:
+	# needs to setup everything
