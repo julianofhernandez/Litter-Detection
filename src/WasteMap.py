@@ -15,11 +15,14 @@ import glob
 from tqdm import tqdm
 
 class WasteMap:
-	def __init__(self, file_path):
+	def __init__(self, file_path, model_path=None, confidence=0.7):
 		self.file_path = file_path
 		self.read(file_path)
-		self.detector = YOLOv3()
 		self.mapillary = Mapillary()
+		if model_path is None:
+			self.detector = None
+		else:
+			self.detector = YOLOv3(model_path, confidence=confidence)
 
 	def print_map(self):
 		'''print map from the loaded geoJSON file'''
@@ -28,7 +31,7 @@ class WasteMap:
 		# fig = matplotlib.pyplot.gcf()
 		# fig.set_size_inches(15, 8, forward=True)
 		plt.show()
-	
+
 	def interactive_map(self):
 		#not currently working
 		self.dataframe.explore()
@@ -39,15 +42,16 @@ class WasteMap:
 			print("Not a valid image path")
 			return
 		try:
-			coordinates = self.mapillary.get_coordinates(image_id)
+			# coordinates = self.mapillary.get_coordinates(image_id)
 			new_row = [{
 				'image_path': image_path,
-				'waste': self.detector.detect(image_path),
-				'geometry': Point(coordinates)
+				'waste': self.detector.detect(image_path, image_path + '_processed.png')
+				#! TODO needs to be uncommented
+				# 'geometry': Point(coordinates)
 			}]
 			self.dataframe = self.dataframe.append(geopandas.GeoDataFrame(new_row), ignore_index=True)
 		except Exception as e:
-			print(e)
+			print("error:" + str(e))
 
 	def add_images(self,images_path):
 		images = glob.glob(os.path.join(images_path, '*.*'), recursive=True)
@@ -55,16 +59,16 @@ class WasteMap:
 		for i in tqdm(range(len(images))):
 			self.add_image(images[i])
 
-	def get_coordinates(self, image_path):
-		#TODO: No longer in use needs to be removed
-		id = os.path.splitext(os.path.basename(image_path))[0]
-		responce = requests.get('https://graph.mapillary.com/2265641036902438?access_token=MLY|3461141010677895|c26e4e4b32b90d5cb1db934c54ebe2c8&fields=id,computed_geometry,thumb_1024_url')
-		responce_json = json.loads(responce.content.decode('utf-8'))
-		coordinates = responce_json['computed_geometry']['coordinates']
-		#TODO: need to be converted to epsg3857 before returning
-		# lon = random.randrange(-121,-130,-1)
-		# lat = random.randrange(30,40)
-		return coordinates
+	# def get_coordinates(self, image_path):
+	# 	#TODO: No longer in use needs to be removed
+	# 	id = os.path.splitext(os.path.basename(image_path))[0]
+	# 	responce = requests.get('https://graph.mapillary.com/2265641036902438?access_token=MLY|3461141010677895|c26e4e4b32b90d5cb1db934c54ebe2c8&fields=id,computed_geometry,thumb_1024_url')
+	# 	responce_json = json.loads(responce.content.decode('utf-8'))
+	# 	coordinates = responce_json['computed_geometry']['coordinates']
+	# 	#TODO: need to be converted to epsg3857 before returning
+	# 	# lon = random.randrange(-121,-130,-1)
+	# 	# lat = random.randrange(30,40)
+	# 	return coordinates
 
 	def read(self, file_path=None):
 		'''Opens geoJSOn save file'''
