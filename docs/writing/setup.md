@@ -27,3 +27,6 @@ src/menu.py is the entry point
 models/yolov3-pretrained-coco.weights
 models/yolov3-pretrained-coco.cfg
 models/coco-labels.txt
+## Mask RCNN Setup
+You must install
+https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170

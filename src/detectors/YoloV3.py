@@ -94,8 +94,10 @@ class YOLOv3:
 				color = colors[i]
 				print(label)
 				print(confs[i])
-				cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
-				cv2.putText(img, label, (x, y - 5), font, 1, color, 1)
+				cv2.rectangle(img, (x,y), (x+w, y+h), color, thickness=5)
+				cv2.putText(img, label, (x, y - 5), font, fontScale=3, color=color, thickness=3)
+		# cv2.imshow("Detection", img)
+		# cv2.waitKey(0)
 		if save_path is not None:
 			cv2.imwrite(save_path, img)
 

@@ -23,7 +23,7 @@ class Mapillary:
         responce = requests.get(f'https://graph.mapillary.com/{id}?access_token={self.access_token}&fields=thumb_1024_url')
         responce_json = json.loads(responce.content.decode('utf-8'))
         url = responce_json['thumb_1024_url']
-        urllib.request.urlretrieve(url,os.path.join('images', str(id) + '.png'))
+        urllib.request.urlretrieve(url,os.path.join('images', 'mapillary', str(id) + '.png'))
 
     def download_images_in_bbox(self,minx,miny,maxx,maxy):
         '''Downloads all images in a given bounding box from Mapillary'''
