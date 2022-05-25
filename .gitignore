@@ -3,6 +3,7 @@
 .vscode/
 src/models/
 src/images/
+src/TACO/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
