@@ -67,3 +67,50 @@ Several issues were outlined after analyzing results, these will need to be addr
 ![h street cleanup](https://user-images.githubusercontent.com/39971693/182956590-2909d246-65fa-4c87-ac51-35ed529b3c0a.jpg)
 
 This research demonstrates how computer vision can be used to aid volunteers in finding what areas have the most litter [Fig. 6] and measuring how much of that waste gets removed during a cleanup [Fig. 5]. These techniques will help reduce the amount of litter in the environment, which has been rapidly increasing due to a combination of high waste production, and low collection rates. This can harm animals, be a health risk for surrounding communities, and cause environmental hazards. While trash clean-up activities can help collect and dispose of litter, they are expensive, and thus usually only focus on especially dirty areas. Using computer vision to quantify trash levels in different communities would help these organizations focus their efforts where they’re most needed. Because global waste production isn’t predicted to plateau until the end of the century, new technologies such as this, are needed to help clean up trash faster than it’s being littered.
+
+## References
+[1] J. R. Jambeck et al., “Plastic waste inputs from land into the ocean,” Science, vol. 347, no. 6223, pp. 768–771, 2015.
+
+[2] M. Sigler, “The effects of plastic pollution on aquatic wildlife: current situations and future solutions,” Water, Air, & Soil Pollution, vol. 225, no. 11, pp. 1–9, 2014.
+
+[3] D. Hoornweg and P. Bhada-Tata, “What a waste: a global review of solid waste management,” World Bank, 2012.
+
+[4] H. Yang, M. Ma, J. R. Thompson, and R. J. Flower, “Waste management, informal recycling, environmental pollution and public health,” J Epidemiol Community Health, vol. 72, no. 3, pp. 237–243, Mar. 2018, doi: 10.1136/jech-2016-208597.
+
+[5] Z. Liu, M. Adams, and T. R. Walker, “Are exports of recyclables from developed to developing countries waste pollution transfer or part of the global circular economy?,” Resources, Conservation and Recycling, vol. 136, pp. 22–23, 2018.
+
+[6] S. J. Barnes, “Out of sight, out of mind: Plastic waste exports, psychological distance and consumer plastic purchasing,” Global Environmental Change, vol. 58, p. 101943, 2019.
+
+[7] J. Redmon, S. Davila, R. Girshick, and A. Farhadi, “You Only Look Once: Unified, Real-Time Object Detection,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, USA, Jun. 2016, pp. 779–788. doi: 10.1109/CVPR.2016.91.
+
+[8] B. D. Carolis, F. Ladogana, and N. Macchiarulo, “YOLO TrashNet: Garbage Detection in Video Streams,” in 2020 IEEE Conference on Evolving and Adaptive Intelligent Systems (EAIS), Bari, Italy, May 2020, pp. 1–7. doi: 10.1109/EAIS48028.2020.9122693.
+
+[9] J. Redmon and A. Farhadi, “YOLO9000: Better, Faster, Stronger,” in 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Honolulu, HI, Jul. 2017, pp. 6517–6525. doi: 10.1109/CVPR.2017.690.
+
+[10] L. Donati, T. Fontanini, F. Tagliaferri, and A. Prati, “An Energy Saving Road Sweeper Using Deep Vision for Garbage Detection,” Applied Sciences, vol. 10, no. 22, p. 8146, Nov. 2020, doi: 10.3390/app10228146.
+
+[11] M. Yang and G. Thung, “Classification of trash for recyclability status,” Stanford.edu. [Online]. Available: http://cs229.stanford.edu/proj2016/report/ThungYang-ClassificationOfTrashForRecyclabilityStatus-report.pdf.
+
+[12] H. Gupta, “Trash Image Classification system using machine learning and deep learning algorithms,” Dublin, National College of Ireland, 2020. http://norma.ncirl.ie/4396/.
+
+[13] P. Proença and P. Simões, Tacodataset.org. [Online]. Available: http://tacodataset.org/. [Accessed: 31-Jan-2022].
+
+[14] H. Panwar et al., “AquaVision: Automating the detection of waste in water bodies using deep transfer learning,” Case Studies in Chemical and Environmental Engineering, vol. 2, p. 100026, Sep. 2020, doi: 10.1016/j.cscee.2020.100026.
+
+[15] P. F. Proença and P. Simões, “TACO: Trash Annotations in Context for Litter Detection,” arXiv:2003.06975 [cs], Mar. 2020, Accessed: Oct. 15, 2021. [Online]. Available: http://arxiv.org/abs/2003.06975
+
+[16] U. S. EPA and OLEM, “National overview: Facts and figures on materials, wastes and recycling,” 2017. https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials.
+
+[17] J. Bai, S. Lian, Z. Liu, K. Wang, and D. Liu, “Deep Learning Based Robot for Automatically Picking Up Garbage on the Grass,” IEEE Trans. Consumer Electron., vol. 64, no. 3, pp. 382–389, Aug. 2018, doi: 10.1109/TCE.2018.2859629.
+
+[18] P. Kandel, “Computer Vision For Recycling,” University of Mary Washington, 2020. https://scholar.umw.edu/student_research/379/.
+
+[19] K. He, G. Gkioxari, P. Dollár, and R. Girshick, “Mask R-CNN,” arXiv:1703.06870 [cs], Jan. 2018, Accessed: Jan. 01, 2022. [Online]. Available: http://arxiv.org/abs/1703.06870
+
+[20] Mapillary.com. [Online]. Available: https://www.mapillary.com/platform. [Accessed: 11-May-2022].
+
+[21] K. Grines, “Video encoding & compression: Why storage & quality matter,” Harmonicinc.com, 17-Aug-2020.
+
+[22] R. Hebbalaguppe, G. Garg, E. Hassan, H. Ghosh, and A. Verma, “Telecom Inventory Management via Object Recognition and Localisation on Google Street View Images,” in 2017 IEEE Winter Conference on Applications of Computer Vision (WACV), Santa Rosa, CA, USA, Mar. 2017, pp. 725–733. doi: 10.1109/WACV.2017.86.
+
+[23] K. Willis, C. Maureaud, C. Wilcox, and B. D. Hardesty, “How successful are waste abatement campaigns and government policies at reducing plastic waste into the marine environment?,” Marine Policy, vol. 96, pp. 243–249, Oct. 2018, doi: 10.1016/j.marpol.2017.11.037.
