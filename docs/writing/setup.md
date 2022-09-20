@@ -1,10 +1,17 @@
+## Python
+Download and install [Python 3.7.9](https://www.python.org/downloads/release/python-379/)
+
 ## Packages
-Use python 3.7.9
 pip install requirements.txt
 install GDAL, rasterio, and Fiona packages from https://www.lfd.uci.edu/~gohlke/pythonlibs/
-rasterio-1.2.10-cp37-cp37m-win_amd64.whl
-GDAL-3.3.3-cp37-cp37m-win_amd64.whl
-Fiona-1.8.20-cp37-cp37m-win_amd64.whl
+or using these links using ```python37 -m pip install <wheel_file_path>```
+
+[rasterio-1.2.10-cp37-cp37m-win_amd64.whl](https://download.lfd.uci.edu/pythonlibs/archived/cp37/rasterio-1.2.10-cp37-cp37m-win_amd64.whl)
+
+[GDAL-3.3.3-cp37-cp37m-win_amd64.whl](https://download.lfd.uci.edu/pythonlibs/archived/cp37/GDAL-3.3.3-cp37-cp37m-win_amd64.whl)
+
+[Fiona-1.8.20-cp37-cp37m-win_amd64.whl](https://download.lfd.uci.edu/pythonlibs/archived/cp37/Fiona-1.8.21-cp37-cp37m-win_amd64.whl)
+
 
 Install tensorflow 1.15
 https://www.tensorflow.org/install/pip#windows
