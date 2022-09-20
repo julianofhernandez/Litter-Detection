@@ -8,9 +8,13 @@ class ExifData:
 		with open(img_path, 'rb') as src:
 			img = Image(src)
 			if img.has_exif:
-				lon = self.decimal_coords(img.gps_longitude, img.gps_longitude_ref)
-				lat = self.decimal_coords(img.gps_latitude, img.gps_latitude_ref)
-				return (lon,lat)
+				try:
+					lon = self.decimal_coords(img.gps_longitude, img.gps_longitude_ref)
+					lat = self.decimal_coords(img.gps_latitude, img.gps_latitude_ref)
+					return (lon,lat)
+				except:
+					print(imagePath + " doesn't contain coordinate data")
+					return None
 			else:
 				print(imagePath + " doesn't contain coordinate data")
 				return None
