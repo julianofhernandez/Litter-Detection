@@ -1,6 +1,9 @@
 ## Abstract
 Abstract—This study combines photo metadata and computer vision to quantify where uncollected litter is present. Images from the Trash Annotations in Context (TACO) dataset were used to teach an algorithm to detect 10 categories of garbage. Although it worked well with smartphone photos, it struggled when trying to process images from vehicle mounted cameras. However, increasing the variety of perspectives and backgrounds in the dataset will help it improve in unfamiliar situations. These data are plotted onto a map which, as accuracy improves, could be used for measuring waste management strategies and quantifying trends.
 
+![image](https://user-images.githubusercontent.com/39971693/191097030-172aea3d-f23b-4e23-9cc4-184917f45298.png)
+
+
 ## The Problem
 The world is increasingly relying on plastics for food packaging, electronics, single use containers, etc. In the 1960s they made up less than 1% of municipal solid waste, by 2005 this number rose to 10%. Post-consumer waste alone accounts for about 5% of total greenhouse gas emissions each year and costs over $200 billion each year. The world bank estimated the global waste production will continue to double roughly every decade, and won't plateu until the end of the century.
 
